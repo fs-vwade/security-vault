@@ -21,6 +21,19 @@ const elements = {
 		},
 	],
 };
+const sequence = {
+	message:
+		"You have received this message because you have been chosen to open an important vault. Here is the secret combination:",
+	keys: {
+		1: 5 + 5, //10, // should this be an equation? (unsure)
+		2: 30 + 100 / 10,
+		3: 3 * 13,
+	},
+	combination: undefined,
+};
+sequence.combination = `${sequence.keys[1]}-${sequence.keys[2]}-${sequence.keys[3]}`;
+console.log(sequence.message, sequence.combination);
+alert(`${sequence.message} ${sequence.combination}`);
 
 //Object.entries(elements).forEach((e) => {
 elements.fields.forEach((e) => {
